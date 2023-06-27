@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./header.css";
+import { classNames } from "../../utils/classNames";
 
 export const Header: React.FC = () => {
   const elementRef = useRef(null);
@@ -33,11 +34,9 @@ export const Header: React.FC = () => {
       <div ref={elementRef} />
       <header className={introVisible ? "header" : "header header--scrolled"}>
         <h1
-          className={
-            introVisible
-              ? "header__title"
-              : "header__title header__title--scrolled"
-          }
+          className={classNames("header__title", {
+            "header__title--scrolled": !introVisible,
+          })}
         >
           Учет ЖКУ
         </h1>
