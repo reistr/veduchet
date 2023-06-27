@@ -1,0 +1,13 @@
+html,body{margin:0;padding:0}
+body, .header--scrolled {
+    background-image: url("../images/background.png");
+    background-color: aqua;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.header__phone {
+    color: white;
+    padding: 5px;
+}
