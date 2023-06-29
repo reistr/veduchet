@@ -1,13 +1,25 @@
-html,body{margin:0;padding:0}
-body, .header--scrolled {
+html,body,h1{margin:0;padding:0}
+body,.parallax {
     background-image: url("../images/background.png");
     background-color: aqua;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
 }
+/* TODO: use self-hosting approach */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
 
-.header__phone {
-    color: white;
-    padding: 5px;
+.section {
+    color: #146063;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.5;
+}
+.section__content--centered {
+    text-align: center;
+}
+
+.section__content {
+    margin: auto;
+    max-width: 50%;
 }

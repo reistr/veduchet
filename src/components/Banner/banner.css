@@ -1,0 +1,39 @@
+.banner {
+    width: 100%; 
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.banner__logo {
+    flex-grow: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    transition: opacity 0.5s;
+}
+
+.banner__logo--hidden {
+    opacity: 0;
+}
+
+.banner__slogan {
+    color: white;
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-size: 24px;
+    flex-grow: 1;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    user-select: none;
+
+    transition: opacity 0.5s;
+}
+
+.banner__slogan--hidden {
+    opacity: 0;
+}

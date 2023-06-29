@@ -1,9 +1,11 @@
 import * as React from "react";
+import { useState } from "react";
+import "./default.css";
 import type { HeadFC, PageProps } from "gatsby";
 import { Header } from "../components/Header";
 import { CallbackForm } from "../components/Callback";
-import "./default.css";
 import { Page } from "../components/Page";
+import { Banner } from "../components/Banner/Banner";
 
 const headingStyles = {
   marginTop: 0,
@@ -25,50 +27,95 @@ const codeStyles = {
 };
 
 const IndexPage: React.FC<PageProps> = () => {
+  const [headerLogoVisibility, setHeaderLogoVisibility] = useState(false);
+
   return (
     <>
-      <div style={{ width: "100%", minHeight: "50vh" }} />
-      <Header />
+      <Header logoVisibility={headerLogoVisibility} />
+      <Banner changeLogoVisibility={(v) => setHeaderLogoVisibility(v)} />
       <Page>
-        <h1 style={headingStyles}>
-          Congratulations
-          <br />
-          <span style={headingAccentStyles}>
-            — you just made a Gatsby site! 🎉🎉🎉
-          </span>
-        </h1>
-        <p style={paragraphStyles}>
-          Edit <code style={codeStyles}>src/pages/index.tsx</code> to see this
-          page update in real-time. 😎
-        </p>
-        <p style={paragraphStyles}>
-          Edit <code style={codeStyles}>src/pages/index.tsx</code> to see this
-          page update in real-time. 😎
-        </p>
-        <p style={paragraphStyles}>
-          Edit <code style={codeStyles}>src/pages/index.tsx</code> to see this
-          page update in real-time. 😎
-        </p>
-        <p style={paragraphStyles}>
-          Edit <code style={codeStyles}>src/pages/index.tsx</code> to see this
-          page update in real-time. 😎
-        </p>
-        <p style={paragraphStyles}>
-          Edit <code style={codeStyles}>src/pages/index.tsx</code> to see this
-          page update in real-time. 😎
-        </p>
-        <p style={paragraphStyles}>
-          Edit <code style={codeStyles}>src/pages/index.tsx</code> to see this
-          page update in real-time. 😎
-        </p>
-        <p style={paragraphStyles}>
-          Edit <code style={codeStyles}>src/pages/index.tsx</code> to see this
-          page update in real-time. 😎
-        </p>
-        <p style={paragraphStyles}>
-          Edit <code style={codeStyles}>src/pages/index.tsx</code> to see this
-          page update in real-time. 😎
-        </p>
+        <div className="section">
+          <p className="section__content section__content--centered">
+            Жильцы стали хуже платить? Ощущаете потерю доходов? Начните
+            экономить! Перейдите на аутсорсинг расчета ЖКУ и ведения
+            бухгалтерии!
+            <br />
+            <br />
+            Мы являемся экспертами рынка ЖКХ с 10 летним стажем и готовы взять
+            на себя ведение вашей бухгалтерии, начисление коммунальных услуг,
+            сдачу отчетности и обмен данными с ГИС ЖКХ. Доверьте вашу работу
+            нам, чтобы снизить расходы больше чем на 25% !
+          </p>
+        </div>
+        <div style={{ marginTop: "40px" }} className="section">
+          <div className="section__content">
+            <h2>Что вы получите:</h2>
+            <ul>
+              <li>
+                Уверенность в начислениях. Мы профессионально и быстро начислим
+                ЖКУ и сформируем квитанции за вас.
+              </li>
+              <li>
+                Спокойствие за правильный расчет налогов. При этом мы
+                постараемся максимально снизить налоговую нагрузку на вашу
+                организацию законным образом.
+              </li>
+              <li>
+                Значительную экономию на бухгалтерском учете и расчете
+                коммунальных услуг. Посмотрите наши тарифы, чтобы лучше понять
+                выгоду аутсорсинга.
+              </li>
+              <li>
+                Бесперебойную работу бухгалтерии. Нам не нужен отпуск или
+                больничный и мы всегда подходим к нашей работе ответственно.
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="section">
+          <div className="section__content">
+            <h1 style={headingStyles}>
+              Congratulations
+              <br />
+              <span style={headingAccentStyles}>
+                — you just made a Gatsby site! 🎉🎉🎉
+              </span>
+            </h1>
+            <p style={paragraphStyles}>
+              Edit <code style={codeStyles}>src/pages/index.tsx</code> to see
+              this page update in real-time. 😎
+            </p>
+            <p style={paragraphStyles}>
+              Edit <code style={codeStyles}>src/pages/index.tsx</code> to see
+              this page update in real-time. 😎
+            </p>
+            <p style={paragraphStyles}>
+              Edit <code style={codeStyles}>src/pages/index.tsx</code> to see
+              this page update in real-time. 😎
+            </p>
+            <p style={paragraphStyles}>
+              Edit <code style={codeStyles}>src/pages/index.tsx</code> to see
+              this page update in real-time. 😎
+            </p>
+            <p style={paragraphStyles}>
+              Edit <code style={codeStyles}>src/pages/index.tsx</code> to see
+              this page update in real-time. 😎
+            </p>
+            <p style={paragraphStyles}>
+              Edit <code style={codeStyles}>src/pages/index.tsx</code> to see
+              this page update in real-time. 😎
+            </p>
+            <p style={paragraphStyles}>
+              Edit <code style={codeStyles}>src/pages/index.tsx</code> to see
+              this page update in real-time. 😎
+            </p>
+            <p style={paragraphStyles}>
+              Edit <code style={codeStyles}>src/pages/index.tsx</code> to see
+              this page update in real-time. 😎
+            </p>
+          </div>
+        </div>
         <CallbackForm />
       </Page>
     </>
