@@ -9,8 +9,16 @@ body,.parallax {
 /* TODO: use self-hosting approach */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
 
+:root {
+    --text-primary: #146063;
+    --text-contrast: #FFF;
+
+    --control-primary: #3E9599;
+    --control-secondary: #86BDBF;
+}
+
 .section {
-    color: #146063;
+    color: var(--text-primary);
     font-size: 18px;
     font-weight: 500;
     line-height: 1.5;
@@ -22,4 +30,14 @@ body,.parallax {
 .section__content {
     margin: auto;
     max-width: 50%;
+}
+.section-possibilities {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin: 40px 0px;
+}
+.section-possibilities__header {
+    margin: 0;
 }

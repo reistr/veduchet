@@ -6,6 +6,7 @@ import { Header } from "../components/Header";
 import { CallbackForm } from "../components/Callback";
 import { Page } from "../components/Page";
 import { Banner } from "../components/Banner/Banner";
+import { PossibilitiesSection } from "../sections";
 
 const headingStyles = {
   marginTop: 0,
@@ -71,6 +72,10 @@ const IndexPage: React.FC<PageProps> = () => {
               </li>
             </ul>
           </div>
+        </div>
+
+        <div style={{ margin: "auto", maxWidth: "80%" }}>
+          <PossibilitiesSection />
         </div>
 
         <div className="section">

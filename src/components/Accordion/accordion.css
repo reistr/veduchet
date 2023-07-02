@@ -1,0 +1,23 @@
+.accordion {
+    width: 100%;
+}
+
+.accordion__clickable { 
+    width: 100%;
+    background-color: var(--control-primary);
+    color: var(--text-contrast);
+    font-size: 20px;
+    border: none;
+    border-radius: 4px;
+    padding: 20px;
+    transition: background-color 0.5s;
+}
+
+.accordion__clickable:hover {
+    background-color: var(--control-secondary);
+}
+
+.accordion__collapsible {
+    overflow: hidden;
+    transition: height 0.5s;
+}
