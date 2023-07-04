@@ -7,6 +7,7 @@ import { CallbackForm } from "../components/Callback";
 import { Page } from "../components/Page";
 import { Banner } from "../components/Banner/Banner";
 import { PossibilitiesSection } from "../sections";
+import { ServicesList } from "../components/ServicesList";
 
 const headingStyles = {
   marginTop: 0,
@@ -47,6 +48,12 @@ const IndexPage: React.FC<PageProps> = () => {
             сдачу отчетности и обмен данными с ГИС ЖКХ. Доверьте вашу работу
             нам, чтобы снизить расходы больше чем на 25% !
           </p>
+        </div>
+        <div
+          style={{ margin: "40px auto", maxWidth: "60%" }}
+          className="section"
+        >
+          <ServicesList />
         </div>
         <div style={{ marginTop: "40px" }} className="section">
           <div className="section__content">
