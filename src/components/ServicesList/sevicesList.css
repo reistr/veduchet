@@ -1,0 +1,11 @@
+.serviceList {
+    display: flex;
+    gap: 5px; 
+    justify-content: space-between;
+}
+
+.serviceCard__title {
+    text-align: center;
+    user-select: none; 
+    margin-top: 20px;
+}

@@ -1,7 +1,6 @@
 import React, { PropsWithChildren } from "react";
 
-const pageStyles = {
-  color: "#232129",
+const pageStyles: React.CSSProperties = {
   backgroundColor: "white",
   padding: 96,
   fontFamily: "-apple-system, Roboto, sans-serif, serif",

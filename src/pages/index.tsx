@@ -36,8 +36,8 @@ const IndexPage: React.FC<PageProps> = () => {
       <Header logoVisibility={headerLogoVisibility} />
       <Banner changeLogoVisibility={(v) => setHeaderLogoVisibility(v)} />
       <Page>
-        <div className="section">
-          <p className="section__content section__content--centered">
+        <div className="section" style={{ maxWidth: "50%" }}>
+          <p style={{ textAlign: "center" }}>
             Жильцы стали хуже платить? Ощущаете потерю доходов? Начните
             экономить! Перейдите на аутсорсинг расчета ЖКУ и ведения
             бухгалтерии!
@@ -49,84 +49,77 @@ const IndexPage: React.FC<PageProps> = () => {
             нам, чтобы снизить расходы больше чем на 25% !
           </p>
         </div>
-        <div
-          style={{ margin: "40px auto", maxWidth: "60%" }}
-          className="section"
-        >
+        <div style={{ maxWidth: "60%" }} className="section">
           <ServicesList />
         </div>
-        <div style={{ marginTop: "40px" }} className="section">
-          <div className="section__content">
-            <h2>Что вы получите:</h2>
-            <ul>
-              <li>
-                Уверенность в начислениях. Мы профессионально и быстро начислим
-                ЖКУ и сформируем квитанции за вас.
-              </li>
-              <li>
-                Спокойствие за правильный расчет налогов. При этом мы
-                постараемся максимально снизить налоговую нагрузку на вашу
-                организацию законным образом.
-              </li>
-              <li>
-                Значительную экономию на бухгалтерском учете и расчете
-                коммунальных услуг. Посмотрите наши тарифы, чтобы лучше понять
-                выгоду аутсорсинга.
-              </li>
-              <li>
-                Бесперебойную работу бухгалтерии. Нам не нужен отпуск или
-                больничный и мы всегда подходим к нашей работе ответственно.
-              </li>
-            </ul>
-          </div>
+        <div style={{ maxWidth: "50%" }} className="section">
+          <h2>Что вы получите:</h2>
+          <ul>
+            <li>
+              Уверенность в начислениях. Мы профессионально и быстро начислим
+              ЖКУ и сформируем квитанции за вас.
+            </li>
+            <li>
+              Спокойствие за правильный расчет налогов. При этом мы постараемся
+              максимально снизить налоговую нагрузку на вашу организацию
+              законным образом.
+            </li>
+            <li>
+              Значительную экономию на бухгалтерском учете и расчете
+              коммунальных услуг. Посмотрите наши тарифы, чтобы лучше понять
+              выгоду аутсорсинга.
+            </li>
+            <li>
+              Бесперебойную работу бухгалтерии. Нам не нужен отпуск или
+              больничный и мы всегда подходим к нашей работе ответственно.
+            </li>
+          </ul>
         </div>
 
-        <div style={{ margin: "auto", maxWidth: "80%" }}>
+        <div style={{ maxWidth: "80%" }} className="section">
           <PossibilitiesSection />
         </div>
 
-        <div className="section">
-          <div className="section__content">
-            <h1 style={headingStyles}>
-              Congratulations
-              <br />
-              <span style={headingAccentStyles}>
-                — you just made a Gatsby site! 🎉🎉🎉
-              </span>
-            </h1>
-            <p style={paragraphStyles}>
-              Edit <code style={codeStyles}>src/pages/index.tsx</code> to see
-              this page update in real-time. 😎
-            </p>
-            <p style={paragraphStyles}>
-              Edit <code style={codeStyles}>src/pages/index.tsx</code> to see
-              this page update in real-time. 😎
-            </p>
-            <p style={paragraphStyles}>
-              Edit <code style={codeStyles}>src/pages/index.tsx</code> to see
-              this page update in real-time. 😎
-            </p>
-            <p style={paragraphStyles}>
-              Edit <code style={codeStyles}>src/pages/index.tsx</code> to see
-              this page update in real-time. 😎
-            </p>
-            <p style={paragraphStyles}>
-              Edit <code style={codeStyles}>src/pages/index.tsx</code> to see
-              this page update in real-time. 😎
-            </p>
-            <p style={paragraphStyles}>
-              Edit <code style={codeStyles}>src/pages/index.tsx</code> to see
-              this page update in real-time. 😎
-            </p>
-            <p style={paragraphStyles}>
-              Edit <code style={codeStyles}>src/pages/index.tsx</code> to see
-              this page update in real-time. 😎
-            </p>
-            <p style={paragraphStyles}>
-              Edit <code style={codeStyles}>src/pages/index.tsx</code> to see
-              this page update in real-time. 😎
-            </p>
-          </div>
+        <div style={{ maxWidth: "50%" }} className="section">
+          <h1 style={headingStyles}>
+            Congratulations
+            <br />
+            <span style={headingAccentStyles}>
+              — you just made a Gatsby site! 🎉🎉🎉
+            </span>
+          </h1>
+          <p style={paragraphStyles}>
+            Edit <code style={codeStyles}>src/pages/index.tsx</code> to see this
+            page update in real-time. 😎
+          </p>
+          <p style={paragraphStyles}>
+            Edit <code style={codeStyles}>src/pages/index.tsx</code> to see this
+            page update in real-time. 😎
+          </p>
+          <p style={paragraphStyles}>
+            Edit <code style={codeStyles}>src/pages/index.tsx</code> to see this
+            page update in real-time. 😎
+          </p>
+          <p style={paragraphStyles}>
+            Edit <code style={codeStyles}>src/pages/index.tsx</code> to see this
+            page update in real-time. 😎
+          </p>
+          <p style={paragraphStyles}>
+            Edit <code style={codeStyles}>src/pages/index.tsx</code> to see this
+            page update in real-time. 😎
+          </p>
+          <p style={paragraphStyles}>
+            Edit <code style={codeStyles}>src/pages/index.tsx</code> to see this
+            page update in real-time. 😎
+          </p>
+          <p style={paragraphStyles}>
+            Edit <code style={codeStyles}>src/pages/index.tsx</code> to see this
+            page update in real-time. 😎
+          </p>
+          <p style={paragraphStyles}>
+            Edit <code style={codeStyles}>src/pages/index.tsx</code> to see this
+            page update in real-time. 😎
+          </p>
         </div>
         <CallbackForm />
       </Page>

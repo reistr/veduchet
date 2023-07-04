@@ -2,7 +2,7 @@ import React from "react";
 import { Accordion } from "../components/Accordion";
 
 export const PossibilitiesSection = () => (
-  <section className="section section-possibilities">
+  <section className="section-possibilities">
     <h2 className="section-possibilities__header">
       Возможности аутсорсинга для ЖКХ
     </h2>

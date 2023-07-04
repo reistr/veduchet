@@ -1,4 +1,5 @@
-html,body,h1{margin:0;padding:0}
+html,body,h1,h2{margin:0;padding:0}
+
 body,.parallax {
     background-image: url("../images/background.png");
     background-color: aqua;
@@ -6,6 +7,7 @@ body,.parallax {
     background-size: cover;
     background-attachment: fixed;
 }
+
 /* TODO: use self-hosting approach */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
 
@@ -22,21 +24,18 @@ body,.parallax {
     font-size: 18px;
     font-weight: 500;
     line-height: 1.5;
-}
-.section__content--centered {
-    text-align: center;
+    margin: 96px auto;
 }
 
-.section__content {
-    margin: auto;
-    max-width: 50%;
+.section:first-child {
+    margin-top: 0px;
 }
+
 .section-possibilities {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 10px;
-    margin: 40px 0px;
 }
 .section-possibilities__header {
     margin: 0;

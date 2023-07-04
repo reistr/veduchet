@@ -1,4 +1,5 @@
 import React from "react";
+import "./sevicesList.css";
 
 const IconStub: React.FC = () => (
   <div
@@ -16,9 +17,7 @@ interface CardProps {
 const ServiceCard: React.FC<CardProps> = ({ title, icon }) => (
   <div>
     {icon}
-    <div style={{ textAlign: "center", userSelect: "none", marginTop: "20px" }}>
-      {title}
-    </div>
+    <div className="serviceCard__title">{title}</div>
   </div>
 );
 
@@ -26,9 +25,7 @@ const SERVICES_STUB = new Array(5).fill("Услуги");
 
 export const ServicesList: React.FC = () => {
   return (
-    <div
-      style={{ display: "flex", gap: "5px", justifyContent: "space-between" }}
-    >
+    <div className="serviceList">
       {SERVICES_STUB.map((s, i) => (
         <ServiceCard key={i} icon={<IconStub />} title={s} />
       ))}
