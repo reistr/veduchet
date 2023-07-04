@@ -12,20 +12,27 @@ export const Accordion: React.FC<IProps> = ({ title, children }) => {
   const collapsibleHeight =
     expanded && wrapperRef.current ? wrapperRef.current.clientHeight : 0;
 
-  const sign = expanded ? "-" : "+";
-  const buttonContent = sign.concat(title ? " " + title : "");
-
   const handleClick = () => {
     setExpanded((value) => !value);
   };
 
   return (
     <div className="accordion">
-      <button className="accordion__clickable" onClick={handleClick}>
-        {buttonContent}
+      <button
+        className="accordion__clickable"
+        data-testid="accordion-clickable"
+        onClick={handleClick}
+      >
+        <div
+          className="clickable__title"
+          data-testid="accordion-clickable-title"
+        >
+          {title}
+        </div>
       </button>
       <div
         className={"accordion__collapsible"}
+        data-testid="accordion-collapsible"
         style={{ height: collapsibleHeight + "px" }}
       >
         <div
