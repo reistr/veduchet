@@ -1,26 +1,50 @@
 import React from "react";
+import "./callbackForm.css";
 
 // https://www.gatsbyjs.com/docs/building-a-contact-form/
 
 export const CallbackForm: React.FC = () => {
   return (
-    <form method="post" action="#">
-      <h2>Остались вопросы? Закажите обратный звонок! </h2>
+    <form
+      className="callbackForm"
+      method="post"
+      action="#"
+      onSubmit={(e) => console.log(e)}
+    >
+      <h2>Оставить заявку прямо сейчас</h2>
       <p>Закажите обратный звонок и узнайте о всех преимуществах аутсорсинга</p>
-      <label>
+
+      <label className="sr-only" htmlFor="name">
         ФИО
-        <input type="text" name="name" id="name" />
       </label>
-      <label>
+      <input
+        className="callbackForm__input"
+        id="name"
+        type="text"
+        name="name"
+        placeholder="ФИО"
+      />
+      <label className="sr-only" htmlFor="phone">
         Телефон
-        <input type="text" name="subject" id="subject" />
       </label>
-      <label>
+      <input
+        className="callbackForm__input"
+        id="phone"
+        type="tel"
+        name="phone"
+        placeholder="Телефон"
+      />
+      <label className="sr-only" htmlFor="email">
         Email
-        <input type="email" name="email" id="email" />
       </label>
+      <input
+        className="callbackForm__input"
+        id="email"
+        type="email"
+        name="email"
+        placeholder="Email"
+      />
       <button type="submit">Позвоните мне</button>
-      <input type="reset" value="Очистить" />
     </form>
   );
 };

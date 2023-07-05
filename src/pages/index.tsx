@@ -121,7 +121,10 @@ const IndexPage: React.FC<PageProps> = () => {
             page update in real-time. 😎
           </p>
         </div>
-        <CallbackForm />
+
+        <div style={{ maxWidth: "80%" }} className="section">
+          <CallbackForm />
+        </div>
       </Page>
     </>
   );

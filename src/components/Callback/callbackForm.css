@@ -1,0 +1,25 @@
+.callbackForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.callbackForm__input {
+    border: none;
+    border-bottom: 1px solid var(--text-primary);
+    outline: none;
+
+    width: 50%;
+
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.5;
+    color: var(--text-primary);
+    text-align: center;
+}
+
+.callbackForm__input:focus {
+    border-bottom: 2px solid var(--text-primary);
+    background-color: var(--text-secondary);
+}

@@ -1,4 +1,4 @@
-html,body,h1,h2{margin:0;padding:0}
+html,body,p,h1,h2{margin:0;padding:0}
 
 body,.parallax {
     background-image: url("../images/background.png");
@@ -13,6 +13,7 @@ body,.parallax {
 
 :root {
     --text-primary: #146063;
+    --text-secondary: #F5F8F8;
     --text-contrast: #FFF;
 
     --control-primary: #3E9599;
@@ -40,3 +41,14 @@ body,.parallax {
 .section-possibilities__header {
     margin: 0;
 }
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+  }
