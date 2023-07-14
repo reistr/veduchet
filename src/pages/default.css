@@ -9,11 +9,12 @@ body,.parallax {
 }
 
 /* TODO: use self-hosting approach */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=IBM+Plex+Serif:wght@700&display=swap');
 
 :root {
-    --text-primary: #146063;
-    --text-secondary: #F5F8F8;
+    --text-primary: #000;
+    --text-secondary: #16535E;
+    --text-hover: #F5F8F8;
     --text-contrast: #FFF;
 
     --control-primary: #3E9599;
@@ -23,13 +24,20 @@ body,.parallax {
 .section {
     color: var(--text-primary);
     font-size: 18px;
-    font-weight: 500;
+    font-weight: 400;
     line-height: 1.5;
     margin: 96px auto;
 }
 
 .section:first-child {
     margin-top: 0px;
+}
+
+.section h2 {
+    color: var(--text-secondary);
+    font-family: 'IBM Plex Serif';
+    font-weight: 700;
+    font-size: 54px;
 }
 
 .section-illustrated {
@@ -49,8 +57,13 @@ body,.parallax {
     align-items: center;
     gap: 10px;
 }
+
 .section-possibilities__header {
     margin: 0;
+}
+
+.section-possibilities__list>li::marker{
+    color: var(--text-secondary);
 }
 
 .sr-only {

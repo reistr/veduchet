@@ -7,7 +7,7 @@ export const PossibilitiesSection = () => (
       Возможности аутсорсинга для ЖКХ
     </h2>
     <Accordion title="Расчет жилищно-коммунальных услуг и капремонта">
-      <ul>
+      <ul className="section-possibilities__list">
         <li>Учет начисленных ЖКУ и капремонта в разрезе лицевых счетов;</li>
         <li>Учет показаний индивидуальных и общедомовых счетчиков;</li>
         <li> Учет задолженности собственников ЖКУ;</li>
@@ -29,7 +29,7 @@ export const PossibilitiesSection = () => (
       </ul>
     </Accordion>
     <Accordion title="Ведение бухгалтерского и налогового учета">
-      <ul>
+      <ul className="section-possibilities__list">
         <li>Составление финансовой, бухгалтерской и налоговой отчетности;</li>
         <li>Отправка отчетности;</li>
         <li>Взаиморасчеты с поставщиками и подрядчиками;</li>
@@ -46,7 +46,7 @@ export const PossibilitiesSection = () => (
       </ul>
     </Accordion>
     <Accordion title="Раскрытие информации в ГИС ЖКХ">
-      <ul>
+      <ul className="section-possibilities__list">
         <li>Регистрация в ГИС ЖКХ;</li>
         <li>
           Раскрытие информации, согласно действующего законодательства на
