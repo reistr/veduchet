@@ -40,7 +40,7 @@ export const Banner: React.FC<IProps> = ({ changeLogoVisibility }) => {
   }, []);
 
   return (
-    <div ref={elementRef} className="banner">
+    <div ref={elementRef} className="banner parallax">
       <div
         className={classNames("banner__logo", {
           "banner__logo--hidden": !logoVisibility,

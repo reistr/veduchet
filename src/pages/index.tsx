@@ -43,7 +43,7 @@ const IndexPage: React.FC<PageProps> = () => {
           <img src={ill1} />
           <div>
             <h2>Что мы предлагаем:</h2>
-            <ul>
+            <ul className="section__list">
               <li>
                 Уверенность в начислениях. Мы профессионально и быстро начислим
                 ЖКУ и сформируем квитанции за вас.
@@ -76,7 +76,7 @@ const IndexPage: React.FC<PageProps> = () => {
         >
           <div>
             <h2>О нас:</h2>
-            <ul>
+            <ul className="section__list">
               <li>10 лет опыта расчета ЖКУ и учета в ЖКХ.</li>
               <li>
                 Мы помогаем нашим клиентам. Не только ведем учет, но и ежедневно
@@ -100,7 +100,12 @@ const IndexPage: React.FC<PageProps> = () => {
           <CallbackForm />
         </div>
       </Page>
-      <div style={{ minHeight: "40vh", opacity: "0" }}></div>
+      <div
+        className="parallax"
+        style={{
+          minHeight: "40vh",
+        }}
+      ></div>
     </>
   );
 };

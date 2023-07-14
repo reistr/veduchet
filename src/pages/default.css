@@ -1,10 +1,10 @@
 html,body,p,h1,h2{margin:0;padding:0}
 
-body,.parallax {
+.parallax {
     background-image: url("../images/background.jpg");
     background-color: #0e7b80;
     background-repeat: no-repeat;
-    background-size: auto;
+    background-size: cover;
     background-attachment: fixed;
 }
 
@@ -40,9 +40,22 @@ body,.parallax {
     font-size: 54px;
 }
 
+.section__list {
+    padding-left: 12px;
+}
+
+.section__list>li::marker{
+    content: "√  ";
+    font-family: 'Roboto';
+    font-weight: 700;
+    font-size: 1.1em;
+    color: var(--text-secondary);
+}
+
 .section-illustrated {
     display: flex;
     flex-direction: row;
+    justify-content: center;
     align-items: end;
     gap: 40px;
 }

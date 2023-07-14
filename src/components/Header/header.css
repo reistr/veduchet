@@ -5,10 +5,10 @@
   position: sticky;
   top: 0;
   width: 100%;
+  z-index: 100;
 }
 
 .header__title {
-    margin: 10px;
     transition: opacity 0.5s;
 }
 
@@ -33,6 +33,7 @@
     font-weight: 500;
     line-height: 1.5;
 }
+
 .header__button:hover {
     color: aqua;
     border-color: aqua;
