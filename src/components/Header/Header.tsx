@@ -5,9 +5,10 @@ import logoTitle from "../../images/logo_title.svg";
 
 interface IProps {
   logoVisibility: boolean;
+  onClick: () => void;
 }
 
-export const Header: React.FC<IProps> = ({ logoVisibility }) => {
+export const Header: React.FC<IProps> = ({ logoVisibility, onClick }) => {
   return (
     <>
       <div />
@@ -19,9 +20,9 @@ export const Header: React.FC<IProps> = ({ logoVisibility }) => {
         >
           <img src={logoTitle} height="76px" />
         </div>
-        <div className="header__phone">8-800-222-9-365</div>
-        <button className="header__button" onClick={() => console.log("click")}>
-          Кнопка
+        <div className="header__phone">8-800-222-9-XXX</div>
+        <button className="header__button" onClick={onClick}>
+          Оставить заявку
         </button>
       </header>
     </>

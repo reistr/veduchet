@@ -1,5 +1,5 @@
 import * as React from "react";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import "./default.css";
 import type { HeadFC, PageProps } from "gatsby";
 import { Header } from "../components/Header";
@@ -13,11 +13,18 @@ import ill1 from "../images/ill_1.jpg";
 import ill2 from "../images/ill_2.jpg";
 
 const IndexPage: React.FC<PageProps> = () => {
+  const formRef = useRef<HTMLDivElement>(null);
   const [headerLogoVisibility, setHeaderLogoVisibility] = useState(false);
+
+  const onClick = () => {
+    if (formRef.current) {
+      formRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   return (
     <>
-      <Header logoVisibility={headerLogoVisibility} />
+      <Header logoVisibility={headerLogoVisibility} onClick={onClick} />
       <Banner changeLogoVisibility={(v) => setHeaderLogoVisibility(v)} />
       <Page>
         <div className="section" style={{ maxWidth: "50%" }}>
@@ -96,7 +103,7 @@ const IndexPage: React.FC<PageProps> = () => {
           <img src={ill2} />
         </section>
 
-        <div style={{ maxWidth: "60%" }} className="section">
+        <div ref={formRef} style={{ maxWidth: "60%" }} className="section">
           <CallbackForm />
         </div>
       </Page>

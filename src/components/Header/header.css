@@ -24,10 +24,10 @@
 
 .header__button {
     color: white;
-    background: transparent;
-    border: 1px solid white;
-    border-radius: 4px;
-    padding: 4px 20px;
+    background: rgba(223, 226, 104, 0.7);
+    border: 0px solid #DFE268;
+    border-radius: 8px;
+    padding: 10px 30px;
     text-align: center;
     font-size: 18px;
     font-weight: 500;
@@ -35,7 +35,6 @@
 }
 
 .header__button:hover {
-    color: aqua;
-    border-color: aqua;
+    background: #DFE268 ;
     cursor: pointer;
 }
