@@ -1,10 +1,10 @@
 html,body,p,h1,h2{margin:0;padding:0}
 
 body,.parallax {
-    background-image: url("../images/background.png");
-    background-color: aqua;
+    background-image: url("../images/background.jpg");
+    background-color: #0e7b80;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: auto;
     background-attachment: fixed;
 }
 
@@ -30,6 +30,17 @@ body,.parallax {
 
 .section:first-child {
     margin-top: 0px;
+}
+
+.section-illustrated {
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    gap: 40px;
+}
+
+.section-illustrated ul {
+    margin-bottom: 0px;
 }
 
 .section-possibilities {

@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./banner.css";
-import logo from "../../images/logo64.svg";
+import logo from "../../images/logo.svg";
 import { classNames } from "../../utils/classNames";
 
 const SLOGAN_THRESHOLD = 0.45;
