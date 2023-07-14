@@ -15,6 +15,7 @@
 
 .accordion__clickable:hover {
     background-color: var(--control-secondary);
+    cursor: pointer;
 }
 
 .accordion__collapsible {
@@ -35,4 +36,9 @@
     border-top: none;
     border-radius: 16px;
     pointer-events: none;
+}
+
+.accordion__container {
+    width: "100%";
+    padding: 0px 4px;
 }

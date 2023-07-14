@@ -37,10 +37,10 @@ export const Accordion: React.FC<IProps> = ({ title, children }) => {
       >
         <div
           ref={wrapperRef}
+          className={"accordion__container"}
           style={{
-            // Hack for proper height calculation
+            /* Hack for proper height calculation */
             display: "flex",
-            width: "100%",
           }}
         >
           {children}
