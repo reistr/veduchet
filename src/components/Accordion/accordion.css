@@ -20,4 +20,19 @@
 .accordion__collapsible {
     overflow: hidden;
     transition: height 0.5s;
+    position: relative;
+}
+
+.accordion__collapsible::after {
+    content: "";
+    position: absolute;
+    display: block;
+    top: -16px;
+    left: 4px;
+    right: 4px;
+    bottom: 0;
+    border: 1px solid #9F9F9F;
+    border-top: none;
+    border-radius: 16px;
+    pointer-events: none;
 }
