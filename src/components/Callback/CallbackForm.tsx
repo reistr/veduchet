@@ -1,15 +1,12 @@
 import React from "react";
 import "./callbackForm.css";
 
-// https://www.gatsbyjs.com/docs/building-a-contact-form/
-
 export const CallbackForm: React.FC = () => {
   return (
     <form
       className="callbackForm"
       method="post"
-      action="#"
-      onSubmit={(e) => console.log(e)}
+      action={`${process.env.GATSBY_CALLBACK_HANDLER_URL}`}
     >
       <h2>Оставить заявку прямо сейчас</h2>
       <p>Закажите обратный звонок и узнайте о всех преимуществах аутсорсинга</p>
@@ -23,6 +20,7 @@ export const CallbackForm: React.FC = () => {
         type="text"
         name="name"
         placeholder="ФИО"
+        required
       />
       <label className="sr-only" htmlFor="phone">
         Телефон
@@ -33,6 +31,7 @@ export const CallbackForm: React.FC = () => {
         type="tel"
         name="phone"
         placeholder="Телефон"
+        required
       />
       <label className="sr-only" htmlFor="email">
         Email
@@ -44,7 +43,9 @@ export const CallbackForm: React.FC = () => {
         name="email"
         placeholder="Email"
       />
-      <button type="submit">Позвоните мне</button>
+      <button className="callbackForm__button" type="submit">
+        Позвоните мне
+      </button>
     </form>
   );
 };

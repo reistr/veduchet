@@ -27,7 +27,7 @@ const IndexPage: React.FC<PageProps> = () => {
       <Header logoVisibility={headerLogoVisibility} onClick={onClick} />
       <Banner changeLogoVisibility={(v) => setHeaderLogoVisibility(v)} />
       <Page>
-        <div className="section">
+        <section className="section">
           <p style={{ textAlign: "center" }}>
             Жильцы стали хуже платить? Ощущаете потерю доходов? Начните
             экономить! Перейдите на аутсорсинг расчета ЖКУ и ведения
@@ -39,10 +39,10 @@ const IndexPage: React.FC<PageProps> = () => {
             сдачу отчетности и обмен данными с ГИС ЖКХ. Доверьте вашу работу
             нам, чтобы снизить расходы больше чем на 25% !
           </p>
-        </div>
-        <div className="section">
+        </section>
+        <section className="section">
           <ServicesList />
-        </div>
+        </section>
         <section className="section section-illustrated">
           <img src={ill1} />
           <div>
@@ -70,9 +70,9 @@ const IndexPage: React.FC<PageProps> = () => {
           </div>
         </section>
 
-        <div className="section">
+        <section className="section">
           <PossibilitiesSection />
-        </div>
+        </section>
 
         <section className="section section-illustrated">
           <div>
@@ -97,9 +97,9 @@ const IndexPage: React.FC<PageProps> = () => {
           <img src={ill2} />
         </section>
 
-        <div ref={formRef} className="section">
+        <section ref={formRef} className="section">
           <CallbackForm />
-        </div>
+        </section>
       </Page>
       <div
         className="parallax"

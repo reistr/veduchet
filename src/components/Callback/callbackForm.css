@@ -23,3 +23,20 @@
     border-bottom: 2px solid var(--text-primary);
     background-color: var(--text-hover);
 }
+
+.callbackForm__button {
+    color: white;
+    background: var(--control-primary);
+    border: 0px;
+    border-radius: 8px;
+    padding: 10px 30px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+.callbackForm__button:hover {
+    background: var(--control-secondary);
+    cursor: pointer;
+}

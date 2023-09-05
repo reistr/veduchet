@@ -4,43 +4,38 @@
   </a>
 </p>
 <h1 align="center">
-  Gatsby Minimal TypeScript Starter
+  Distantuchet landing page made with Gatsby
 </h1>
 
-## 🚀 Quick start
+## Setup
 
-1.  **Create a Gatsby site.**
+**Example environment.**
 
-    Use the Gatsby CLI to create a new site, specifying the minimal TypeScript starter.
+Provide api for handling callback form
 
-    ```shell
-    # create a new Gatsby site using the minimal TypeScript starter
-    npm init gatsby -- -ts
-    ```
+```shell
+GATSBY_CALLBACK_HANDLER_URL=https://example.com/api/path
+```
 
-2.  **Start developing.**
+## Available scripts
 
-    Navigate into your new site’s directory and start it up.
+In the project directory, you can run:
 
-    ```shell
-    cd my-gatsby-site/
-    npm run develop
-    ```
+### `npm run start` or `npm run develop`
 
-3.  **Open the code and start customizing!**
+Runs the app in the development mode.\
+Open [http://localhost:8000](http://localhost:8000) to view it in the browser.
 
-    Your site is now running at http://localhost:8000!
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
 
-    Edit `src/pages/index.tsx` to see your site update in real-time!
+### `npm run test`
 
-4.  **Learn more**
+Launches the test runner.\
 
-    - [Documentation](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [Tutorials](https://www.gatsbyjs.com/docs/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [Guides](https://www.gatsbyjs.com/docs/how-to/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [API Reference](https://www.gatsbyjs.com/docs/api-reference/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [Plugin Library](https://www.gatsbyjs.com/plugins?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
+### `npm run build`
+
+Builds the app for production.\
 
 ## 🚀 Quick start (Netlify)
 
