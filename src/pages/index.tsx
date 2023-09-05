@@ -27,7 +27,7 @@ const IndexPage: React.FC<PageProps> = () => {
       <Header logoVisibility={headerLogoVisibility} onClick={onClick} />
       <Banner changeLogoVisibility={(v) => setHeaderLogoVisibility(v)} />
       <Page>
-        <div className="section" style={{ maxWidth: "50%" }}>
+        <div className="section">
           <p style={{ textAlign: "center" }}>
             Жильцы стали хуже платить? Ощущаете потерю доходов? Начните
             экономить! Перейдите на аутсорсинг расчета ЖКУ и ведения
@@ -40,13 +40,10 @@ const IndexPage: React.FC<PageProps> = () => {
             нам, чтобы снизить расходы больше чем на 25% !
           </p>
         </div>
-        <div style={{ maxWidth: "60%" }} className="section">
+        <div className="section">
           <ServicesList />
         </div>
-        <section
-          style={{ maxWidth: "60%" }}
-          className="section section-illustrated"
-        >
+        <section className="section section-illustrated">
           <img src={ill1} />
           <div>
             <h2>Что мы предлагаем:</h2>
@@ -73,14 +70,11 @@ const IndexPage: React.FC<PageProps> = () => {
           </div>
         </section>
 
-        <div style={{ maxWidth: "60%" }} className="section">
+        <div className="section">
           <PossibilitiesSection />
         </div>
 
-        <section
-          style={{ maxWidth: "60%" }}
-          className="section section-illustrated"
-        >
+        <section className="section section-illustrated">
           <div>
             <h2>О нас:</h2>
             <ul className="section__list">
@@ -103,7 +97,7 @@ const IndexPage: React.FC<PageProps> = () => {
           <img src={ill2} />
         </section>
 
-        <div ref={formRef} style={{ maxWidth: "60%" }} className="section">
+        <div ref={formRef} className="section">
           <CallbackForm />
         </div>
       </Page>
