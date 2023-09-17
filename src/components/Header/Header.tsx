@@ -18,7 +18,7 @@ export const Header: React.FC<IProps> = ({ logoVisibility, onClick }) => {
             "header__title--hidden": !logoVisibility,
           })}
         >
-          <img src={logoTitle} height="76px" />
+          <img src={logoTitle} alt="Logo" height="76px" />
         </div>
         <div className="header__phone">8-800-222-9-XXX</div>
         <button className="header__button" onClick={onClick}>

@@ -7,7 +7,8 @@ dotenv.config({
 
 const config: GatsbyConfig = {
   siteMetadata: {
-    title: "distantuchet",
+    title: "ДистантУчёт",
+    description: `ДистантУчёт визитка - аутсорсинг расчета ЖКУ и ведения бухгалтерии`,
     siteUrl: "https://distantuchet.netlify.app/",
   },
   // More easily incorporate content into your pages through automatic TypeScript type generation and better GraphQL IntelliSense.

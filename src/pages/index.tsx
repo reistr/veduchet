@@ -11,6 +11,7 @@ import { ServicesList } from "../components/ServicesList";
 
 import ill1 from "../images/ill_1.jpg";
 import ill2 from "../images/ill_2.jpg";
+import { PageHead } from "../components/Seo";
 
 const IndexPage: React.FC<PageProps> = () => {
   const formRef = useRef<HTMLDivElement>(null);
@@ -44,7 +45,7 @@ const IndexPage: React.FC<PageProps> = () => {
           <ServicesList />
         </section>
         <section className="section section-illustrated">
-          <img src={ill1} />
+          <img alt="Изображение: верные рассчеты." src={ill1} />
           <div>
             <h2>Что мы предлагаем:</h2>
             <ul className="section__list">
@@ -94,7 +95,7 @@ const IndexPage: React.FC<PageProps> = () => {
               </li>
             </ul>
           </div>
-          <img src={ill2} />
+          <img alt="Изображение: профессионализм." src={ill2} />
         </section>
 
         <section ref={formRef} className="section">
@@ -113,4 +114,4 @@ const IndexPage: React.FC<PageProps> = () => {
 
 export default IndexPage;
 
-export const Head: HeadFC = () => <title>ДистантУчёт</title>;
+export const Head: HeadFC = () => <PageHead />;

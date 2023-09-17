@@ -36,7 +36,7 @@ interface CardProps {
 
 const ServiceCard: React.FC<CardProps> = ({ title, icon }) => (
   <div className="serviceCard">
-    <img src={icon} height="76px" />
+    <img src={icon} alt={title} height="76px" />
     <div className="serviceCard__title">{title}</div>
   </div>
 );

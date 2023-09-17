@@ -46,7 +46,7 @@ export const Banner: React.FC<IProps> = ({ changeLogoVisibility }) => {
           "banner__logo--hidden": !logoVisibility,
         })}
       >
-        <img src={logo} height="120" width="120" />
+        <img src={logo} alt="Logo" height="120" width="120" />
       </div>
       <div
         className={classNames("banner__slogan", {
