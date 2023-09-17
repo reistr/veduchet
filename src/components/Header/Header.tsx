@@ -20,7 +20,12 @@ export const Header: React.FC<IProps> = ({ logoVisibility, onClick }) => {
         >
           <img src={logoTitle} alt="Logo" height="76px" />
         </div>
-        <div className="header__phone">8-800-222-9-XXX</div>
+        <a
+          className="header__phone"
+          href={`tel:${process.env.GATSBY_CONTACT_PHONE_NUMBER}`}
+        >
+          {process.env.GATSBY_CONTACT_PHONE_TEXT}
+        </a>
         <button className="header__button" onClick={onClick}>
           Оставить заявку
         </button>

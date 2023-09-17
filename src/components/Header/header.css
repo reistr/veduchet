@@ -5,11 +5,10 @@
   position: sticky;
   top: 0;
   width: 100%;
-  z-index: 100;
 }
 
 .header__title {
-    transition: opacity 0.5s;
+    transition: opacity 0.3s;
 }
 
 .header__title--hidden {

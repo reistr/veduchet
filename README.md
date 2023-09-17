@@ -11,10 +11,14 @@
 
 **Example environment.**
 
-Provide api for handling callback form
+Provide api for handling callback form and contact information
 
 ```shell
 GATSBY_CALLBACK_HANDLER_URL=https://example.com/api/path
+
+#Contact information
+GATSBY_CONTACT_PHONE_NUMBER=+78002229XXX
+GATSBY_CONTACT_PHONE_TEXT=+7-800-222-9-XXX
 ```
 
 ## Available scripts
