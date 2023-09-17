@@ -19,6 +19,11 @@
     color: white;
     padding: 5px;
     margin-left: 50px;
+    text-decoration: none;
+}
+
+.header__phone:hover {
+    text-decoration: underline;
 }
 
 .header__button {

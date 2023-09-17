@@ -2,6 +2,7 @@ import React from "react";
 import "./header.css";
 import { classNames } from "../../utils/classNames";
 import logoTitle from "../../images/logo_title.svg";
+import { PhoneNumber } from "../PhoneNumber";
 
 interface IProps {
   logoVisibility: boolean;
@@ -20,12 +21,7 @@ export const Header: React.FC<IProps> = ({ logoVisibility, onClick }) => {
         >
           <img src={logoTitle} alt="Logo" height="76px" />
         </div>
-        <a
-          className="header__phone"
-          href={`tel:${process.env.GATSBY_CONTACT_PHONE_NUMBER}`}
-        >
-          {process.env.GATSBY_CONTACT_PHONE_TEXT}
-        </a>
+        <PhoneNumber className="header__phone" />
         <button className="header__button" onClick={onClick}>
           Оставить заявку
         </button>

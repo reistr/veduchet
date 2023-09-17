@@ -1,17 +1,18 @@
 import * as React from "react";
 import { useRef, useState } from "react";
-import "./default.css";
 import type { HeadFC, PageProps } from "gatsby";
 import { Header } from "../components/Header";
 import { CallbackForm } from "../components/Callback";
 import { Page } from "../components/Page";
-import { Banner } from "../components/Banner/Banner";
 import { PossibilitiesSection } from "../sections";
 import { ServicesList } from "../components/ServicesList";
+import { PageHead } from "../components/Seo";
+import { Footer } from "../components/Footer";
+import { Banner } from "../components/Banner";
+import "./default.css";
 
 import ill1 from "../images/ill_1.jpg";
 import ill2 from "../images/ill_2.jpg";
-import { PageHead } from "../components/Seo";
 
 const IndexPage: React.FC<PageProps> = () => {
   const formRef = useRef<HTMLDivElement>(null);
@@ -102,12 +103,8 @@ const IndexPage: React.FC<PageProps> = () => {
           <CallbackForm />
         </section>
       </Page>
-      <div
-        className="parallax"
-        style={{
-          minHeight: "40vh",
-        }}
-      ></div>
+
+      <Footer />
     </>
   );
 };

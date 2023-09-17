@@ -1,0 +1,37 @@
+.footer {
+    min-height: 38vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--text-contrast, #fff);
+}
+
+.footer__header {
+    margin-top: 24px;
+    font-family: 'IBM Plex Serif';
+    font-weight: 700;
+    font-size: 42px;
+}
+
+.footer__contacts {
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.footer__link {
+    color: var(--text-contrast, #fff);
+    text-decoration: none;
+}
+
+.footer__link:hover {
+    text-decoration: underline;
+}
+
+.footer__copyright {
+    align-self: start;
+    margin: 4px;
+    font-size: 12px;
+}

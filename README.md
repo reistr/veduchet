@@ -19,6 +19,7 @@ GATSBY_CALLBACK_HANDLER_URL=https://example.com/api/path
 #Contact information
 GATSBY_CONTACT_PHONE_NUMBER=+78002229XXX
 GATSBY_CONTACT_PHONE_TEXT=+7-800-222-9-XXX
+GATSBY_CONTACT_EMAIL=email@example.com
 ```
 
 ## Available scripts
