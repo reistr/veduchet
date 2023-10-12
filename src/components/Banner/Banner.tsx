@@ -54,6 +54,7 @@ export const Banner: React.FC<IProps> = ({ changeLogoVisibility }) => {
         })}
       >
         <h1>Наша работа - ведение учета!</h1>
+        <h2>Бухгалтерские услуги для УК, ТСЖ, СНТ</h2>
       </div>
     </div>
   );

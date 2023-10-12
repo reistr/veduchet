@@ -29,18 +29,19 @@ const IndexPage: React.FC<PageProps> = () => {
       <Header logoVisibility={headerLogoVisibility} onClick={onClick} />
       <Banner changeLogoVisibility={(v) => setHeaderLogoVisibility(v)} />
       <Page>
-        <section className="section">
-          <p style={{ textAlign: "center" }}>
+        <section className="section" style={{ textAlign: "center" }}>
+          <p>
             Жильцы стали хуже платить? Ощущаете потерю доходов? Начните
             экономить! Перейдите на аутсорсинг расчета ЖКУ и ведения
             бухгалтерии!
-            <br />
             <br />
             Мы являемся экспертами рынка ЖКХ с 20 летним стажем и готовы взять
             на себя ведение вашей бухгалтерии, начисление коммунальных услуг,
             сдачу отчетности и обмен данными с ГИС ЖКХ. Доверьте вашу работу
             нам, чтобы снизить расходы больше чем на 25% !
           </p>
+          <h2>Работаем по всей России!</h2>
+          <h2>Стоимость услуг от 5000 руб/месяц</h2>
         </section>
         <section className="section">
           <ServicesList />

@@ -20,6 +20,7 @@ html,body,p,h1,h2{margin:0;padding:0}
     --control-primary: #3E9599;
     --control-secondary: #86BDBF;
 }
+
 /* extra-small */
 @media screen and (max-width: 599px) {
     :root {
@@ -83,7 +84,7 @@ html,body,p,h1,h2{margin:0;padding:0}
     color: var(--text-secondary);
     font-family: 'IBM Plex Serif';
     font-weight: 700;
-    font-size: 54px;
+    font-size: 46px;
 }
 
 .section__list {

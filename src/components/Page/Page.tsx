@@ -3,7 +3,7 @@ import React, { PropsWithChildren } from "react";
 const pageStyles: React.CSSProperties = {
   backgroundColor: "white",
   padding: 4,
-  paddingTop: 96,
+  paddingTop: 80,
   fontFamily: "-apple-system, Roboto, sans-serif, serif",
   overflow: "clip",
 };
