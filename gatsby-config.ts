@@ -45,7 +45,7 @@ const config: GatsbyConfig = {
     {
       resolve: "gatsby-plugin-robots-txt",
       options: {
-        policy: [{ userAgent: "*", disallow: "/" }],
+        policy: [{ userAgent: "*", allow: "/" }],
       },
     },
     {
@@ -61,6 +61,7 @@ const config: GatsbyConfig = {
       },
     },
     "gatsby-plugin-offline",
+    "gatsby-plugin-no-index",
   ],
 };
 
