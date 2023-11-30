@@ -15,8 +15,6 @@ import ill2 from "../images/ill_2.jpg";
 
 const IndexPage: React.FC<PageProps> = () => {
   const formRef = useRef<HTMLDivElement>(null);
-  const [headerLogoVisibility, setHeaderLogoVisibility] = useState(false);
-
   const onClick = () => {
     if (formRef.current) {
       formRef.current.scrollIntoView({ behavior: "smooth" });
@@ -25,9 +23,9 @@ const IndexPage: React.FC<PageProps> = () => {
 
   return (
     <>
-      <Header logoVisibility={headerLogoVisibility} onClick={onClick} />
+      <Header onClick={onClick} />
       <article>
-        <Banner changeLogoVisibility={(v) => setHeaderLogoVisibility(v)} />
+        <Banner />
         <div className="main-article">
           <section className="section">
             <p style={{ textAlign: "center" }}>

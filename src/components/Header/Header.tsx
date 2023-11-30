@@ -1,24 +1,18 @@
 import React from "react";
 import "./header.css";
-import { classNames } from "../../utils/classNames";
 import logoTitle from "../../images/logo_title.svg";
 import { PhoneNumber } from "../PhoneNumber";
 
 interface IProps {
-  logoVisibility: boolean;
   onClick: () => void;
 }
 
-export const Header: React.FC<IProps> = ({ logoVisibility, onClick }) => {
+export const Header: React.FC<IProps> = ({ onClick }) => {
   return (
     <>
       <div />
       <header className="header parallax">
-        <div
-          className={classNames("header__title", {
-            "header__title--hidden": !logoVisibility,
-          })}
-        >
+        <div className={"header__title"}>
           <img src={logoTitle} alt="Logo" height="76px" />
         </div>
         <PhoneNumber className="header__phone" />
