@@ -9,7 +9,7 @@ import { ServicesList } from "../components/ServicesList";
 import { PageHead } from "../components/Seo";
 import { Footer } from "../components/Footer";
 import { Banner } from "../components/Banner";
-import "./default.css";
+import "./main.css";
 
 import ill1 from "../images/ill_1.jpg";
 import ill2 from "../images/ill_2.jpg";
