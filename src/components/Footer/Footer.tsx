@@ -6,7 +6,7 @@ import photo from "../../images/photo.jpg";
 
 export const Footer: React.FC = () => {
   return (
-    <div className="parallax footer">
+    <footer className="parallax footer">
       <h2 className="footer__header">Наши контакты:</h2>
       <div className="footer__container">
         <div className="footer__photo">
@@ -31,6 +31,6 @@ export const Footer: React.FC = () => {
         © Copyright 2023. ДистантУчёт - аутсорсинг расчета ЖКУ и ведения
         бухгалтерии.
       </div>
-    </div>
+    </footer>
   );
 };

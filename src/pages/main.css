@@ -64,6 +64,14 @@
 @media screen and (min-width: 1536px) {
 }
 
+.main-article {
+    background-color: "white";
+    padding: 4px;
+    padding-top: 96px;
+    font-family: "-apple-system, Roboto, sans-serif, serif";
+    overflow: "clip",
+}
+
 .section {
     color: var(--text-primary);
     font-size: 18px;

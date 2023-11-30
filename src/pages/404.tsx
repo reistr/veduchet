@@ -1,7 +1,6 @@
 import * as React from "react";
 import { Link, HeadFC, PageProps } from "gatsby";
 import { PageHead } from "../components/Seo";
-import { Page } from "../components/Page";
 
 const headingStyles = {
   marginTop: 0,
@@ -15,7 +14,7 @@ const paragraphStyles = {
 
 const NotFoundPage: React.FC<PageProps> = () => {
   return (
-    <Page>
+    <main className="main-article">
       <section className="section">
         <h2 style={headingStyles}>Страница не найдена</h2>
         <p style={paragraphStyles}>
@@ -24,7 +23,7 @@ const NotFoundPage: React.FC<PageProps> = () => {
         </p>
         <Link to="/">Перейти на главную страницу</Link>.
       </section>
-    </Page>
+    </main>
   );
 };
 
