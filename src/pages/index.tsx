@@ -15,17 +15,23 @@ import ill2 from "../images/ill_2.jpg";
 
 const IndexPage: React.FC<PageProps> = () => {
   const formRef = useRef<HTMLDivElement>(null);
+
+  const [headerButtonVisibility, setHeaderButtonVisibility] = useState(false);
+
   const onClick = () => {
     if (formRef.current) {
-      formRef.current.scrollIntoView({ behavior: "smooth" });
+      formRef.current.scrollIntoView({ block: "center", behavior: "smooth" });
     }
   };
 
   return (
     <>
-      <Header onClick={onClick} />
+      <Header onClick={onClick} buttonVisibility={headerButtonVisibility} />
       <article>
-        <Banner />
+        <Banner
+          onButtonVisibilityChanged={(v) => setHeaderButtonVisibility(!v)}
+          onButtonClick={onClick}
+        />
         <div className="main-article">
           <section className="section section__centered">
             <p>

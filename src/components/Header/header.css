@@ -7,14 +7,6 @@
   width: 100%;
 }
 
-.header__title {
-    transition: opacity 0.3s;
-}
-
-.header__title--hidden {
-    opacity: 0;
-}
-
 .header__phone {
     color: white;
     padding: 5px;
@@ -36,8 +28,13 @@
     font-size: 18px;
     font-weight: 500;
     line-height: 1.5;
+
+    transition: opacity 0.2s;
 }
 
+.header__button--hidden {
+    opacity: 0;
+}
 .header__button:hover {
     background: var(--control-secondary-hover) ;
     cursor: pointer;
