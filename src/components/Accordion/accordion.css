@@ -14,7 +14,7 @@
 }
 
 .accordion__clickable:hover {
-    background-color: var(--control-secondary);
+    background-color: var(--control-primary-hover);
     cursor: pointer;
 }
 

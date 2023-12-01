@@ -27,9 +27,9 @@
 }
 
 .header__button {
-    color: white;
-    background: rgba(223, 226, 104, 0.7);
-    border: 0px solid #DFE268;
+    color: var(--text-contrast);
+    background: var(--control-secondary);
+    border: 0px;
     border-radius: 8px;
     padding: 10px 30px;
     text-align: center;
@@ -39,6 +39,6 @@
 }
 
 .header__button:hover {
-    background: #DFE268 ;
+    background: var(--control-secondary-hover) ;
     cursor: pointer;
 }

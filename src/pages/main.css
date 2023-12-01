@@ -7,7 +7,7 @@
 }
 
 /* TODO: use self-hosting approach */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=IBM+Plex+Serif:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=IBM+Plex+Serif:wght@400;700&display=swap');
 
 :root {
     --text-primary: #000;
@@ -16,8 +16,12 @@
     --text-contrast: #FFF;
 
     --control-primary: #3E9599;
-    --control-secondary: #86BDBF;
+    --control-primary-hover: #86BDBF;
+
+    --control-secondary: #709F68;
+    --control-secondary-hover: #8EBD86 ;
 }
+
 /* extra-small */
 @media screen and (max-width: 599px) {
     :root {
@@ -67,7 +71,7 @@
 .main-article {
     background-color: "white";
     padding: 4px;
-    padding-top: 96px;
+    padding-top: 64px;
     font-family: "-apple-system, Roboto, sans-serif, serif";
     overflow: "clip",
 }
@@ -89,7 +93,11 @@
     color: var(--text-secondary);
     font-family: 'IBM Plex Serif';
     font-weight: 700;
-    font-size: 54px;
+    font-size: 42px;
+}
+
+.section__centered {
+    text-align: center;
 }
 
 .section__list {

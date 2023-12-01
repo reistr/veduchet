@@ -27,18 +27,18 @@ const IndexPage: React.FC<PageProps> = () => {
       <article>
         <Banner />
         <div className="main-article">
-          <section className="section">
-            <p style={{ textAlign: "center" }}>
+          <section className="section section__centered">
+            <p>
               Жильцы стали хуже платить? Ощущаете потерю доходов? Начните
               экономить! Перейдите на аутсорсинг расчета ЖКУ и ведения
               бухгалтерии!
-              <br />
               <br />
               Мы являемся экспертами рынка ЖКХ с 10 летним стажем и готовы взять
               на себя ведение вашей бухгалтерии, начисление коммунальных услуг,
               сдачу отчетности и обмен данными с ГИС ЖКХ. Доверьте вашу работу
               нам, чтобы снизить расходы больше чем на 25% !
             </p>
+            <h2 style={{ marginTop: "8px" }}>Работаем по всей России!</h2>
           </section>
           <section className="section">
             <ServicesList />
