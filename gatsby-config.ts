@@ -61,7 +61,6 @@ const config: GatsbyConfig = {
       },
     },
     "gatsby-plugin-offline",
-    "gatsby-plugin-no-index",
   ],
 };
 
