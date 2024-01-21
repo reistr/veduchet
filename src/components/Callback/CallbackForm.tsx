@@ -13,7 +13,7 @@ export const CallbackForm: React.FC = () => {
       <p className="callbackForm__accent">
         * точную стоимость услуг рассчитаем после звонка
       </p>
-
+      <input type="text" name="_gotcha" style={{ display: "none" }} />
       <label className="sr-only" htmlFor="name">
         ФИО
       </label>
