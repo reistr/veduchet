@@ -10,7 +10,10 @@ export const CallbackForm: React.FC = () => {
     >
       <h2>Оставить заявку прямо сейчас</h2>
       <p>Закажите обратный звонок и узнайте о всех преимуществах аутсорсинга</p>
-
+      <p className="callbackForm__accent">
+        * точную стоимость услуг рассчитаем после звонка
+      </p>
+      <input type="text" name="_gotcha" style={{ display: "none" }} />
       <label className="sr-only" htmlFor="name">
         ФИО
       </label>

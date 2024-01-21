@@ -37,6 +37,11 @@
 }
 
 .callbackForm__button:hover {
-    background: var(--control-secondary);
+    background: var(--control-primary-hover);
     cursor: pointer;
+}
+
+.callbackForm__accent {
+    color: var(--text-secondary);
+    font-weight: 500;
 }

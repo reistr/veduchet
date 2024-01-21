@@ -1,42 +1,66 @@
 .banner {
     width: 100%; 
-    min-height: 50vh;
+    min-height: 48vh;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    justify-content: space-between;
-}
-
-.banner__logo {
-    flex-grow: 2;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-
-    transition: opacity 0.3s;
-}
-
-.banner__logo--hidden {
-    opacity: 0;
-    pointer-events: none;
+    justify-content: space-around;
 }
 
 .banner__slogan {
     color: white;
     font-family: 'IBM Plex Serif';
     font-weight: 700;
-    font-size: 24px;
-    flex-grow: 1;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    font-size: 42px;
     user-select: none;
-
-    transition: opacity 0.3s;
+    transition: opacity 0.2s;
 }
 
 .banner__slogan--hidden {
     opacity: 0;
     pointer-events: none;
+}
+
+.banner__header {
+    color: white;
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 24px;
+    user-select: none;
+    transition: opacity 0.2s;
+}
+
+.banner__header--hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.banner__button {
+    color: var(--text-contrast);
+    background: #709F68;
+    box-shadow: 5px 5px 15px black;
+    border: 0px;
+    border-radius: 8px;
+    padding: 40px 20px;
+    text-align: center;
+    font-family: 'IBM Plex Serif';
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1.5;
+    transition: opacity 0.2s;
+}
+
+.banner__button--hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.button__price {
+    font-weight: 700;
+    font-size: 42px;
+}
+
+.banner__button:hover {
+    background: #8EBD86;
+    cursor: pointer;
 }

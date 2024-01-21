@@ -7,14 +7,6 @@
   width: 100%;
 }
 
-.header__title {
-    transition: opacity 0.3s;
-}
-
-.header__title--hidden {
-    opacity: 0;
-}
-
 .header__phone {
     color: white;
     padding: 5px;
@@ -27,18 +19,23 @@
 }
 
 .header__button {
-    color: white;
-    background: rgba(223, 226, 104, 0.7);
-    border: 0px solid #DFE268;
+    color: var(--text-contrast);
+    background: var(--control-secondary);
+    border: 0px;
     border-radius: 8px;
     padding: 10px 30px;
     text-align: center;
     font-size: 18px;
     font-weight: 500;
     line-height: 1.5;
+
+    transition: opacity 0.2s;
 }
 
+.header__button--hidden {
+    opacity: 0;
+}
 .header__button:hover {
-    background: #DFE268 ;
+    background: var(--control-secondary-hover) ;
     cursor: pointer;
 }

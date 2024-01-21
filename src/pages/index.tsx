@@ -15,32 +15,36 @@ import ill2 from "../images/ill_2.jpg";
 
 const IndexPage: React.FC<PageProps> = () => {
   const formRef = useRef<HTMLDivElement>(null);
-  const [headerLogoVisibility, setHeaderLogoVisibility] = useState(false);
+
+  const [headerButtonVisibility, setHeaderButtonVisibility] = useState(false);
 
   const onClick = () => {
     if (formRef.current) {
-      formRef.current.scrollIntoView({ behavior: "smooth" });
+      formRef.current.scrollIntoView({ block: "center", behavior: "smooth" });
     }
   };
 
   return (
     <>
-      <Header logoVisibility={headerLogoVisibility} onClick={onClick} />
+      <Header onClick={onClick} buttonVisibility={headerButtonVisibility} />
       <article>
-        <Banner changeLogoVisibility={(v) => setHeaderLogoVisibility(v)} />
+        <Banner
+          onButtonVisibilityChanged={(v) => setHeaderButtonVisibility(!v)}
+          onButtonClick={onClick}
+        />
         <div className="main-article">
-          <section className="section">
-            <p style={{ textAlign: "center" }}>
+          <section className="section section__centered">
+            <p>
               Жильцы стали хуже платить? Ощущаете потерю доходов? Начните
               экономить! Перейдите на аутсорсинг расчета ЖКУ и ведения
               бухгалтерии!
               <br />
-              <br />
-              Мы являемся экспертами рынка ЖКХ с 10 летним стажем и готовы взять
+              Мы являемся экспертами рынка ЖКХ с 20 летним стажем и готовы взять
               на себя ведение вашей бухгалтерии, начисление коммунальных услуг,
               сдачу отчетности и обмен данными с ГИС ЖКХ. Доверьте вашу работу
               нам, чтобы снизить расходы больше чем на 25% !
             </p>
+            <h2 style={{ marginTop: "8px" }}>Работаем по всей России!</h2>
           </section>
           <section className="section">
             <ServicesList />
@@ -79,21 +83,16 @@ const IndexPage: React.FC<PageProps> = () => {
           <section className="section section-illustrated">
             <div>
               <h2>О нас:</h2>
+              <p>Более 20 лет работы в системе ЖКХ, в том числе:</p>
               <ul className="section__list">
-                <li>10 лет опыта расчета ЖКУ и учета в ЖКХ.</li>
                 <li>
-                  Мы помогаем нашим клиентам. Не только ведем учет, но и
-                  ежедневно консультируем и оказываем экспертную поддержку.
+                  рассчеты с населением (собственники, наниматели) за
+                  жилищно-коммунальные услуги;
                 </li>
                 <li>
-                  Тысячи часов консультаций. Каждый день консультируем сотни
-                  организаций по расчету ЖКУ, выгрузки данных в ГИС, бухучету.
+                  работа с большими объемами данных (до 40 тыс. лицевых счетов);
                 </li>
-                <li>
-                  Делаем «под ключ». Готовы взять на себя функции расчетного
-                  центра, решать все необходимые задачи и предоставлять только
-                  качественные услуги.
-                </li>
+                <li>рассчеты с юридическими лицами - потребителями ЖКУ.</li>
               </ul>
             </div>
             <img alt="Изображение: профессионализм." src={ill2} />

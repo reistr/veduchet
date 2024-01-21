@@ -1,31 +1,20 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./banner.css";
-import logo from "../../images/logo.svg";
 import { classNames } from "../../utils/classNames";
 
-const SLOGAN_THRESHOLD = 0.45;
-const LOGO_THRESHOLD = 0.9;
+const SLOGAN_THRESHOLD = 0.95;
+const HEADER_THRESHOLD = 0.7;
+const BUTTON_THRESHOLD = 0.95;
 
-interface IProps {
-  changeLogoVisibility: (value: boolean) => void;
-}
-
-export const Banner: React.FC<IProps> = ({ changeLogoVisibility }) => {
-  const elementRef = useRef(null);
-  const [sloganVisibility, setSloganVisibility] = useState(true);
-  const [logoVisibility, setLogoVisibility] = useState(true);
-
-  const intersectionCallback: IntersectionObserverCallback = ([entry]) => {
-    setSloganVisibility(entry.intersectionRatio >= SLOGAN_THRESHOLD);
-    setLogoVisibility(entry.intersectionRatio >= LOGO_THRESHOLD);
-    changeLogoVisibility(entry.intersectionRatio < LOGO_THRESHOLD);
-  };
-
+const useIntersectionObserver = (
+  elementRef: React.MutableRefObject<Element | null>,
+  callback: IntersectionObserverCallback
+) => {
   useEffect(() => {
-    const observer = new IntersectionObserver(intersectionCallback, {
+    const observer = new IntersectionObserver(callback, {
       root: null,
       rootMargin: "0px",
-      threshold: [SLOGAN_THRESHOLD, LOGO_THRESHOLD],
+      threshold: [SLOGAN_THRESHOLD, HEADER_THRESHOLD, BUTTON_THRESHOLD],
     });
 
     if (elementRef.current) {
@@ -38,23 +27,62 @@ export const Banner: React.FC<IProps> = ({ changeLogoVisibility }) => {
       }
     };
   }, []);
+};
+
+interface Props {
+  onButtonVisibilityChanged: (value: boolean) => void;
+  onButtonClick: () => void;
+}
+
+export const Banner: React.FC<Props> = ({
+  onButtonVisibilityChanged,
+  onButtonClick,
+}) => {
+  const elementRef = useRef(null);
+  const [sloganVisibility, setSloganVisibility] = useState(true);
+  const [headerVisibility, setHeaderVisibility] = useState(true);
+  const [buttonVisibility, setButtonVisibility] = useState(true);
+
+  const intersectionCallback: IntersectionObserverCallback = ([entry]) => {
+    setSloganVisibility(entry.intersectionRatio >= SLOGAN_THRESHOLD);
+    setHeaderVisibility(entry.intersectionRatio >= HEADER_THRESHOLD);
+    setButtonVisibility(entry.intersectionRatio >= BUTTON_THRESHOLD);
+  };
+
+  useEffect(() => {
+    onButtonVisibilityChanged(buttonVisibility);
+  }, [buttonVisibility]);
+
+  useIntersectionObserver(elementRef, intersectionCallback);
 
   return (
     <div ref={elementRef} className="banner parallax">
-      <div
-        className={classNames("banner__logo", {
-          "banner__logo--hidden": !logoVisibility,
-        })}
-      >
-        <img src={logo} alt="Logo" height="120" width="120" />
+      <div className="banner__main">
+        <h2
+          className={classNames("banner__slogan", {
+            "banner__slogan--hidden": !sloganVisibility,
+          })}
+        >
+          Наша работа - <br />
+          ведение учета!
+        </h2>
+        <h1
+          className={classNames("banner__header", {
+            "banner__header--hidden": !headerVisibility,
+          })}
+        >
+          Бухгалтерские услуги для УК, ТСЖ, СНТ
+        </h1>
       </div>
-      <div
-        className={classNames("banner__slogan", {
-          "banner__slogan--hidden": !sloganVisibility,
+
+      <button
+        className={classNames("banner__button", {
+          "banner__button--hidden": !buttonVisibility,
         })}
+        onClick={onButtonClick}
       >
-        <h1>Наша работа - ведение учета!</h1>
-      </div>
+        от <span className="button__price">5000</span> руб.*
+      </button>
     </div>
   );
 };
