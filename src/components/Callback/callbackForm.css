@@ -40,3 +40,8 @@
     background: var(--control-primary-hover);
     cursor: pointer;
 }
+
+.callbackForm__accent {
+    color: var(--text-secondary);
+    font-weight: 500;
+}
