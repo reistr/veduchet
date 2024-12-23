@@ -5,6 +5,18 @@ dotenv.config({
   path: `.env.${process.env.NODE_ENV}`,
 });
 
+const metrikaPlugin = process.env.METRIKA_ID
+  ? [
+      {
+        resolve: `gatsby-plugin-yandex-metrika`,
+        options: {
+          trackingId: process.env.METRIKA_ID,
+          trackHash: true,
+        },
+      },
+    ]
+  : [];
+
 const config: GatsbyConfig = {
   siteMetadata: {
     title: "ДистантУчёт - аутсорсинг ЖКХ и бухгалтерии",
@@ -61,6 +73,7 @@ const config: GatsbyConfig = {
       },
     },
     "gatsby-plugin-offline",
+    ...metrikaPlugin,
   ],
 };
 
