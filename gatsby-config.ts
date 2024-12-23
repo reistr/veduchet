@@ -17,6 +17,10 @@ const metrikaPlugin = process.env.METRIKA_ID
     ]
   : [];
 
+const noIndexPlugin = process.env.SHOULD_INDEX
+  ? []
+  : ["gatsby-plugin-no-index"];
+
 const config: GatsbyConfig = {
   siteMetadata: {
     title: "ДистантУчёт - аутсорсинг ЖКХ и бухгалтерии",
@@ -74,6 +78,7 @@ const config: GatsbyConfig = {
     },
     "gatsby-plugin-offline",
     ...metrikaPlugin,
+    ...noIndexPlugin,
   ],
 };
 
